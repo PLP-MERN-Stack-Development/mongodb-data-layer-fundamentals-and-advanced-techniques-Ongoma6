@@ -2,9 +2,10 @@
 
 // Import MongoDB client
 const { MongoClient } = require('mongodb');
+require('dotenv').config();
 
 // Connection URI (replace with your MongoDB connection string if using Atlas)
-const uri = 'mongodb+srv://plp_bookstore:Ongoma254@plp-bookstore.m5kfdcw.mongodb.net/?retryWrites=true&w=majority&appName=plp-bookstore';
+const uri = process.env.MONGODB_URI;
 
 // Database and collection names
 const dbName = 'plp_bookstore';

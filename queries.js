@@ -1,8 +1,9 @@
 // queries.js
 const { MongoClient } = require("mongodb");
+require('dotenv').config();
 
 //  Replace with your MongoDB Atlas connection string
-const uri = "mongodb+srv://plp_bookstore:Ongoma254@plp-bookstore.m5kfdcw.mongodb.net/?retryWrites=true&w=majority&appName=plp-bookstore";
+const uri = process.env.MONGODB_URI;
 
 const client = new MongoClient(uri);
 
